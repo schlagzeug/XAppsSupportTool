@@ -1,0 +1,43 @@
+﻿<Window x:Class="XAppsSupport.WebLinks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WebLinks" Height="510" Width="510">
+    <Grid Height="500" Width="500">
+        <Button Content="SalesForce"     Height="23" HorizontalAlignment="Left" Margin="318,29,0,0"  Name="button_SalesForce" VerticalAlignment="Top" Width="120" Click="button_SalesForce_Click" />
+        <Button Content="Team Home Page" Height="23" HorizontalAlignment="Left" Margin="318,58,0,0"  Name="button_Home"       VerticalAlignment="Top" Width="120" Click="button_Home_Click" />
+        <Button Content="Time Card"      Height="23" HorizontalAlignment="Left" Margin="318,145,0,0" Name="button_TimeCard"   VerticalAlignment="Top" Width="120" Click="button_TimeCard_Click" />
+        <Button Content="XApps Wiki"     Height="23" HorizontalAlignment="Left" Margin="318,87,0,0"  Name="button_XappsWiki"  VerticalAlignment="Top" Width="120" Click="button_XappsWiki_Click" />
+        <Button Content="TIDB"           Height="23" HorizontalAlignment="Left" Margin="318,116,0,0" Name="button_TIDB"       VerticalAlignment="Top" Width="120" Click="button_TIDB_Click" />
+        <Button Content="WebEX"          Height="23" HorizontalAlignment="Left" Margin="318,174,0,0" Name="button_Webex"      VerticalAlignment="Top" Width="120" Click="button_Webex_Click" />
+
+        <GroupBox Header="Red Fish, Blue Fish" Height="57" HorizontalAlignment="Left" Margin="12,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="276">
+            <Grid Height="36" Width="262">
+                <Button Content="Prod" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0"   Name="button_Prod" VerticalAlignment="Top" Width="75" Click="button_Prod_Click" />
+                <Button Content="Test" Height="23" HorizontalAlignment="Left" Margin="87,6,0,0"  Name="button_Test" VerticalAlignment="Top" Width="75" Click="button_Test_Click" />
+                <Button Content="5010" Height="23" HorizontalAlignment="Left" Margin="168,6,0,0" Name="button_5010" VerticalAlignment="Top" Width="75" Click="button_5010_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Logs" Height="221" HorizontalAlignment="Left" Margin="12,87,0,0" Name="groupBox2" VerticalAlignment="Top" Width="276">
+            <Grid Height="196" Width="264">
+                <Button Content="Master Build Svc"    Height="23" HorizontalAlignment="Left" Margin="18,25,0,0" Name="button_MasterBuildSvc"    VerticalAlignment="Top" Width="117" Click="button_MasterBuildSvc_Click" />
+                <Button Content="ProMaster Build Svc" Height="23" HorizontalAlignment="Left" Margin="18,54,0,0" Name="button_ProMasterBuildSvc" VerticalAlignment="Top" Width="117" Click="button_ProMasterBuildSvc_Click" />
+                <Button Content="ProPayer Build Svc"  Height="23" HorizontalAlignment="Left" Margin="18,83,0,0" Name="button_ProPayerBuildSvc"  VerticalAlignment="Top" Width="117" Click="button_ProPayerBuildSvc_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Import Report" Height="136" HorizontalAlignment="Left" Margin="19,323,0,0" Name="groupBox3" VerticalAlignment="Top" Width="269">
+            <Grid>
+                <Label Content="Site ID" Height="28" HorizontalAlignment="Left" Margin="11,6,0,0" Name="label1" VerticalAlignment="Top" />
+                <Label Content="Import ID" Height="28" HorizontalAlignment="Left" Margin="11,40,0,0" Name="label2" VerticalAlignment="Top" />
+
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="81,8,0,0" Name="textBox_SiteID" VerticalAlignment="Top" Width="120" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="81,42,0,0" Name="textBox_ImportID" VerticalAlignment="Top" Width="120" />
+
+                <Button Content="Open" Height="23" HorizontalAlignment="Left" Margin="126,84,0,0" Name="button_Open" VerticalAlignment="Top" Width="75" Click="button_Open_Click" />
+
+                <CheckBox Content="File" Height="16" HorizontalAlignment="Left" Margin="11,88,0,0" Name="checkBox_File" VerticalAlignment="Top" Checked="checkBox_File_Checked" Unchecked="checkBox_File_Unchecked"/>
+            </Grid>
+        </GroupBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="294,348,0,0" Name="textBox_TaskServerSites" VerticalAlignment="Top" Width="174" />
+        <Button Content="Find Task Servers" Height="23" HorizontalAlignment="Left" Margin="294,380,0,0" Name="button_FindTaskServers" VerticalAlignment="Top" Width="174" Click="button_FindTaskServers_Click" />
+    </Grid>
+</Window>

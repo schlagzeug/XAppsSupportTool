@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CONFIG>
+  <DRSEUSS>
+    <PROD>
+      <CONNECTIONSTRING>server=rcm40cpXapDB50\domsvr;database=X3Resource;Integrated Security=True</CONNECTIONSTRING>
+      <SERVER>https://xWebApps.MedAssets.com/XApps.NET/niaGetZipPackage.aspx</SERVER>
+    </PROD>
+    <TEST999>
+      <CONNECTIONSTRING>server=rcm40csXapDB50\domsvr1;database=X3Resource;Integrated Security=True</CONNECTIONSTRING>
+      <SERVER>https://xTest.MedAssets.com/XApps.NET/niaGetZipPackage.aspx</SERVER>
+    </TEST999>
+    <TEST888>
+      <CONNECTIONSTRING>server=rcm40csXapDB51\domsvr2;database=X3Resource;Integrated Security=True</CONNECTIONSTRING>
+      <SERVER>https://x5010.MedAssets.com/XApps.NET/niaGetZipPackage.aspx</SERVER>
+    </TEST888>
+  </DRSEUSS>
+  <PATHS>
+    <FILES>
+      <APPCONFIG>C:\Program Files (x86)\XactiMed\AppStartup\AppStartup.exe.config</APPCONFIG>
+      <SITEUSERS>\\crp40ppfs05\XApps_Public\BusinessLogic\Tools\Sites_Owner\Sites_Owner.xml</SITEUSERS>
+      <TEAMVIEWXML>http://mac.medassets.com/sites/revenuemanagement/TSS/TS/SolutionsEngineering/SEXApps/Shared%20Documents/TeamViews.xlsx</TEAMVIEWXML>
+    </FILES>
+    <WEB>
+      <REDFISHBLUEFISH>
+        <PROD>https://xwebapps.medassets.com/xapps.net/redfishbluefish.aspx</PROD>
+        <TEST999>https://xTest.MedAssets.com/xapps.net/redfishbluefish.aspx</TEST999>
+        <TEST888>https://x5010.MedAssets.com/xapps.net/redfishbluefish.aspx</TEST888>
+      </REDFISHBLUEFISH>
+      <HOMEPAGE>http://mac.medassets.com/sites/revenuemanagement/TSS/TS/SolutionsEngineering/SEXApps/default.aspx</HOMEPAGE>
+      <XAPPSWIKI>http://rtwiki/doku.php?id=customdev:devs:kb</XAPPSWIKI>
+      <TIMECARD>http://timex.medassets.com/BP/Project/Project%20Center%20Pages/Time.aspx</TIMECARD>
+      <SALESFORCE>http://login.salesforce.com</SALESFORCE>
+      <TALENTMANAGER>http://mac.medassets.com/sites/hr/TalentManager/default.aspx</TALENTMANAGER>
+    </WEB>
+  </PATHS>
+</CONFIG>

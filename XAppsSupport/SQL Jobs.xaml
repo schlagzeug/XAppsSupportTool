@@ -1,0 +1,13 @@
+﻿<Window x:Class="XAppsSupport.SQL_Jobs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SQL_Jobs" Height="500" Width="750">
+    <Grid>
+        <DataGrid AutoGenerateColumns="True" HorizontalAlignment="Stretch" Margin="0,49,0,0" Name="dataGrid_results" VerticalAlignment="Stretch" SelectionMode="Extended" AlternatingRowBackground="LightBlue" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True" CanUserResizeRows="False" IsReadOnly="True" IsTextSearchEnabled="True" SelectionUnit="CellOrRowHeader"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="134,14,0,0" Name="textBox_SearchString" VerticalAlignment="Top" Width="274" />
+        <Button Content="Find" IsDefault="True" Height="23" HorizontalAlignment="Left" Margin="414,14,0,0" Name="button_Find" VerticalAlignment="Top" Width="75" Click="button_Find_Click" />
+        <Button Content="Pop Out" Height="23" HorizontalAlignment="Right" Margin="0,14,25,0" Name="button_PopOut" VerticalAlignment="Top" Width="75" Click="button_PopOut_Click"/>
+        <Label Content="Search Job Name By:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Width="128" />
+    </Grid>
+</Window>

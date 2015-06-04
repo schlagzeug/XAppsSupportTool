@@ -1,0 +1,19 @@
+﻿<Window x:Class="XAppsSupport.DroppedClaims"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DroppedClaims" Height="510" Width="510">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,17,0,0" Name="textBox_Sites" VerticalAlignment="Top" Width="404" />
+
+        <Label Content="Site ID(s):" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label_SiteIDs" VerticalAlignment="Top" />
+
+        <ListBox Height="356" HorizontalAlignment="Left" Margin="12,75,0,0" Name="listBox_Results" VerticalAlignment="Top" Width="461" IsManipulationEnabled="False" SelectionMode="Extended" />
+
+        <Button Content="Find Dropped Claims" Height="23" HorizontalAlignment="Left" Margin="12,46,0,0"   Name="button_FindDroppedClaims" VerticalAlignment="Top" Click="button_FindDroppedClaims_Click" IsDefault="True" />
+        <Button Content="Export to Log"       Height="23" HorizontalAlignment="Left" Margin="12,437,0,0"  Name="button_GenerateLog"       VerticalAlignment="Top" Click="button_GenerateLog_Click" />
+        <Button Content="Open Log"            Height="23" HorizontalAlignment="Left" Margin="400,437,0,0" Name="button_OpenLog"           VerticalAlignment="Top" Click="button_OpenLog_Click" Width="73" />
+
+        <CheckBox Content="Exclude missing folders" Height="16" HorizontalAlignment="Left" Margin="95,441,0,0"   Name="checkBox_noFolders" VerticalAlignment="Top" IsChecked="True" />
+        <CheckBox Content="Exclude empty folders"   Height="16" HorizontalAlignment="Right" Margin="0,441,110,0" Name="checkBox_noFiles"   VerticalAlignment="Top" IsChecked="True" />
+    </Grid>
+</Window>

@@ -1,0 +1,328 @@
+﻿<Window x:Class="XAppsSupport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="XApps Support Tool" ResizeMode="CanMinimize" Icon="greenmushroom.ico" Height="600" Width="800">
+    <Grid>
+        <Menu Height="23" HorizontalAlignment="Left" Name="menu" VerticalAlignment="Top" Width="800" >
+            <MenuItem Header="Run Tool">
+                <MenuItem Header="Claim Converter Re Run" Name="menu_Tool_ClaimConverterReRun" Click="menu_Tool_ClaimConverterReRun_Click" />
+                <Separator />
+                <MenuItem Header="Site Activity Logs" Name="menu_Tool_SiteActivityLogs" Click="menu_Tool_SiteActivityLogs_Click" />
+                <Separator />
+                <MenuItem Header="Presbyterian">
+                    <MenuItem Header="3500 ImportPostErrStat" Name="menu_Tool_3500ImportPostErrStat" Click="menu_Tool_3500ImportPostErrStat_Click" />
+                    <MenuItem Header="3500 ImportPostErrorNotes" Name="menu_Tool_3500ImportPostErrorNotes" Click="menu_Tool_3500ImportPostErrorNotes_Click" />
+                    <MenuItem Header="3502 PIN file" Name="menu_Tool_3502PINFile" Click="menu_Tool_3502PINFile_Click" />
+                </MenuItem>
+                <MenuItem Header="St. Vincent Facilities" Name="menu_Tool_StVincentFacilities" Click="menu_Tool_StVincentFacilities_Click" />
+                <Separator/>
+                <MenuItem Header="Denial Reconciliation">
+                    <MenuItem Header="Denial Recon Tool" Name="menu_Tool_DenialRecon" Click="menu_Tool_DenialRecon_Click" />
+                    <MenuItem Header="Denial Recon Multi" Name="menu_Tool_DenialReconMulti" Click="menu_Tool_DenialReconMulti_Click"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="AppService Tool"   Name="menu_Tool_Appservice"  Click="menu_Tool_Appservice_Click" />
+                <MenuItem Header="AppService Logs for Site" Name="menu_Tool_SiteAppservice" Click="menu_Tool_SiteAppservice_Click" />
+                <Separator/>
+                <MenuItem Header="List FLFs" Name="menu_Tool_ListFLFs" Click="menu_Tool_ListFLFs_Click"/>
+                <MenuItem Header="Check Server App Date" Name="menu_Tool_ServerAppDateCheck" Click="menu_Tool_ServerAppDateCheck_Click"/>
+                <MenuItem Header="Secondary Config Logic" Name="menu_Tool_SecondaryConfig" Click="menu_Tool_SecondaryConfig_Click"/>
+                <Separator/>
+                <MenuItem Header="Dropped Claims" Name="menu_Tool_DroppedClaims" Click="menu_Tool_DroppedClaims_Click"/>
+                <Separator/>
+                <MenuItem Header="Web Links" Name="menu_Tool_WebLinks" Click="menu_Tool_WebLinks_Click"/>
+            </MenuItem>
+            <MenuItem Header="Web Link">
+                <MenuItem Header="RedFishBlueFish">
+                    <MenuItem Header="RFBF Prod" Name="menu_Web_RFBFProd" Click="menu_Web_RFBFProd_Click"/>
+                    <MenuItem Header="RFBF 999"  Name="menu_Web_RFBF999" Click="menu_Web_RFBF999_Click"/>
+                    <MenuItem Header="RFBF 888"  Name="menu_Web_RFBF888" Click="menu_Web_RFBF888_Click"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Team Home Page" Name="menu_Web_TeamHome" Click="menu_Web_TeamHome_Click"/>
+                <MenuItem Header="TeamViews.xlsx" Name="menu_Web_TeamViews" Click="menu_Web_TeamViews_Click"/>
+                <MenuItem Header="Site Owners from Locs Tool" Name="menu_Web_LocsToolsSiteOwners" Click="menu_Web_LocsToolsSiteOwners_Click"/>
+                <MenuItem Header="XApps Wiki"     Name="menu_Web_XappsWiki" Click="menu_Web_XappsWiki_Click"/>
+                <Separator/>
+                <MenuItem Header="Time Card"  Name="menu_Web_TimeCard" Click="menu_Web_TimeCard_Click"/>
+                <MenuItem Header="SalesForce" Name="menu_Web_SalesForce" Click="menu_Web_SalesForce_Click"/>
+                <MenuItem Header="Talent Manager" Name="menu_Web_TalentManager" Click="menu_Web_TalentManager_Click"/>
+            </MenuItem>
+            <MenuItem Header="Launch App">
+                <MenuItem Header="XApps Master Tool" Name="menu_App_MasterTool"      Click="menu_App_MasterTool_Click" />
+                <MenuItem Header="Program Deployer"  Name="menu_App_ProgramDeployer" Click="menu_App_ProgramDeployer_Click" />
+                <MenuItem Header="Source Safe"       Name="menu_App_SourceSafe"      Click="menu_App_SourceSafe_Click"/>
+                <MenuItem Header="Import Finder"     Name="menu_App_ImportFinder"    Click="menu_App_ImportFinder_Click"/>
+                <MenuItem Header="Claim Editor"      Name="menu_App_ClaimEditor"     Click="menu_App_ClaimEditor_Click"/>
+            </MenuItem>
+            <MenuItem Header="View List">
+                <MenuItem Header="Folder IDs"    Name="menu_Lists_FolderIDs" Click="menu_Lists_FolderIDs_Click"/>
+                <MenuItem Header="Import Types"  Name="menu_Lists_ImportTypes" Click="menu_Lists_ImportTypes_Click"/>
+                <MenuItem Header="Denial Status" Name="menu_Lists_DenialStatus" Click="menu_Lists_DenialStatus_Click"/>
+                <MenuItem Header="Denial Activity Codes" Name="menu_Lists_DenialActivity" Click="menu_Lists_DenialActivity_Click" />
+            </MenuItem>
+            <MenuItem Header="Dr. Seuss">
+                <MenuItem Header="Server">
+                    <MenuItem Header="Production" Name="menu_Server_Production" IsCheckable="True" Click="menu_Server_Production_Click"/>
+                    <MenuItem Header="999 Test"   Name="menu_Server_999"        IsCheckable="True" Click="menu_Server_999_Click"/>
+                    <MenuItem Header="888 Test"   Name="menu_Server_888"        IsCheckable="True" Click="menu_Server_888_Click"/>
+                </MenuItem>
+                <MenuItem Header="32bit Resource" Name="menu_32">
+                    <MenuItem Header="Production" Name="menu_32_Production" IsCheckable="True" Click="menu_32_Production_Click"/>
+                    <MenuItem Header="999 Test"   Name="menu_32_999"        IsCheckable="True" Click="menu_32_999_Click"/>
+                    <MenuItem Header="888 Test"   Name="menu_32_888"        IsCheckable="True" Click="menu_32_888_Click"/>
+                </MenuItem>
+                <MenuItem Header="64bit Resource" Name="menu_64">
+                    <MenuItem Header="Production" Name="menu_64_Production" IsCheckable="True" Click="menu_64_Production_Click"/>
+                    <MenuItem Header="999 Test"   Name="menu_64_999"        IsCheckable="True" Click="menu_64_999_Click"/>
+                    <MenuItem Header="888 Test"   Name="menu_64_888"        IsCheckable="True" Click="menu_64_888_Click"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Sync Resources with Server" Name="menu_SyncResources" IsCheckable="True" Click="menu_SyncResources_Click"/>
+                <MenuItem Header="Enable 'One Fish Two Fish'" Name="menu_EnableOneFish" IsCheckable="True" Click="menu_EnableOneFish_Click"/>
+                <MenuItem Header="LDC" Name="menu_LDC" IsCheckable="True" Click="menu_LDC_Click" />
+            </MenuItem>
+        </Menu>
+        <Label Content="Site ID:" Height="28" HorizontalAlignment="Left" Margin="10,40,0,0" Name="label_SiteID" VerticalAlignment="Top" />
+        <ComboBox Name="comboBox_SiteIDs" Height="23" HorizontalAlignment="Left" Margin="56,40,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SiteIDs_SelectionChanged"/>
+        <Button Content="Launch MedAssets Revenue Solutions" Height="23" HorizontalAlignment="Left" Margin="182,40,0,0" Name="button_LaunchXClaim" VerticalAlignment="Top" Width="218" Click="button_LaunchXClaim_Click" />
+        <CheckBox Content="Auto Login" Height="16" HorizontalAlignment="Right" Margin="0,47,297,0"  Name="checkBox_AutoLogin"  VerticalAlignment="Top" IsChecked="True" />
+        <TabControl Height="464" HorizontalAlignment="Left" Margin="10,80,0,0" Name="tabControl" VerticalAlignment="Top" Width="768">
+            <TabItem Header="Resources" Name="tab_Resources">
+                <Grid Height="430" Width="755" >
+                    <Button Content="Get Resources"  Height="23" HorizontalAlignment="Left" Margin="6,401,0,0"  Name="button_Resources"    VerticalAlignment="Top"    Width="118"  Click="button_Resources_Click" IsDefault="True" />
+                    <TextBox                         Height="389" HorizontalAlignment="Left" Margin="6,6,0,0" Name="textBox_Resources" VerticalAlignment="Top" Width="514" IsReadOnly="True" BorderThickness="3" />
+                    <Button Content="View SQL Jobs" Height="23" HorizontalAlignment="Left" Margin="130,401,0,0" Name="button_Resources_SQLJobs" VerticalAlignment="Top" Width="118" Click="button_Resources_SQLJobs_Click"/>
+                    <GroupBox Header="Open in SQL Studio" Height="90" HorizontalAlignment="Left" Margin="526,6,0,0" Name="groupBox5" VerticalAlignment="Top" Width="162">
+                        <Grid>
+                            <Button Content="Claim Server" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_ClaimServer" VerticalAlignment="Top" Width="118" Click="button_ClaimServer_Click" />
+                            <Button Content="Domain Server" Height="23" HorizontalAlignment="Left" Margin="6,35,0,0" Name="button_DomainServer" VerticalAlignment="Top" Width="118" Click="button_DomainServer_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Open in Windows Explorer" Height="100" HorizontalAlignment="Left" Margin="526,102,0,0" Name="groupBox6" VerticalAlignment="Top" Width="162">
+                        <Grid>
+                            <Button Content="Task Server" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_TaskServer" VerticalAlignment="Top" Width="118" Click="button_TaskServer_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="View Job Track Jobs" Height="23" HorizontalAlignment="Left" Margin="254,401,0,0" Name="button_ViewJobTrackJobs" VerticalAlignment="Top" Width="118" Click="button_ViewJobTrackJobs_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Applications" Name="tab_Applications">
+                <Grid>
+                    <DataGrid AutoGenerateColumns="True" Height="379" HorizontalAlignment="Left" Margin="140,6,0,0" Name="dataGrid_Apps" VerticalAlignment="Top" Width="612" AlternatingRowBackground="LightBlue"/>
+                    <Button Content="Open Selected in Visual Studio" Height="35" HorizontalAlignment="Left" Margin="572,391,0,0" Name="button_Apps_OpenSelected" VerticalAlignment="Top" Width="180" Click="button_Apps_OpenSelected_Click"/>
+                    <Button Content="Get latest .exe from Server" Height="35" HorizontalAlignment="Left" Margin="140,391,0,0" Name="button_Apps_UpdateSelected" VerticalAlignment="Top" Width="180" Click="button_Apps_UpdateSelected_Click"/>
+                    <Button Content="Show" Height="35" HorizontalAlignment="Left" Margin="6,215,0,0" Name="button_Apps_Show" VerticalAlignment="Top" Width="128" Click="button_Apps_Show_Click"/>
+                    <GroupBox Header="Claim Type" Height="77" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox_Apps_ClaimType" VerticalAlignment="Top" Width="128">
+                        <Grid>
+                            <CheckBox Content="Inst" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="checkBox_Apps_Inst" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="Prof" Height="16" HorizontalAlignment="Left" Margin="6,28,0,0" Name="checkBox_Apps_Prof" VerticalAlignment="Top" IsChecked="True"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Files" Height="120" HorizontalAlignment="Left" Margin="6,89,0,0" Name="groupBox_Apps_Files" VerticalAlignment="Top" Width="128">
+                        <Grid>
+                            <CheckBox Content="Spec Files" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="checkBox_Apps_SpecFiles" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="Import Config" Height="16" HorizontalAlignment="Left" Margin="6,28,0,0" Name="checkBox_Apps_ImportCfg" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="Unarchive Config" Height="16" HorizontalAlignment="Left" Margin="6,50,0,0" Name="checkBox_Apps_UnarchiveCfg" VerticalAlignment="Top" />
+                            <CheckBox Content="Export Config" Height="16" HorizontalAlignment="Left" Margin="6,72,0,0" Name="checkBox_Apps_ExportCfg" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Open Solution Location" Height="35" HorizontalAlignment="Left" Margin="386,391,0,0" Name="button_Apps_OpenSolutionLocation" VerticalAlignment="Top" Width="180" Click="button_Apps_OpenSolutionLocation_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="File Locations" Name="tab_Locations">
+                <Grid Height="430" Width="755" >
+                    <GroupBox Header="CustomerSS" Height="209" VerticalAlignment="Top" Margin="6,6,587,0">
+                        <Grid>
+                            <Button Content="Open"         Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="button_CustomerSS"       VerticalAlignment="Top" Width="120" Click="button_CustomerSS_Click" />
+                            <Button Content="Update"  Height="23" HorizontalAlignment="Left" Margin="10,38,0,0" Name="button_UpdateCustomerSS" VerticalAlignment="Top" Width="120" Click="button_UpdateCustomerSS_Click" />
+                            <Button Content="Clean"   Height="23" HorizontalAlignment="Left" Margin="10,157,0,0" Name="button_CleanCustomerSS"  VerticalAlignment="Top" Width="120" Click="button_CleanCustomerSS_Click" />
+                            <CheckBox Content="UB"   Height="16" HorizontalAlignment="Left" Margin="11,67,0,0" Name="checkBox_UB"   VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="HCFA" Height="16" HorizontalAlignment="Left" Margin="10,89,0,0" Name="checkBox_HCFA" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="Tables" Height="16" HorizontalAlignment="Left" Margin="10,109,0,0" Name="checkBox_Tables" VerticalAlignment="Top" IsChecked="False"/>
+                            <CheckBox Content="Paths" Height="16" HorizontalAlignment="Left" Margin="10,131,0,0" Name="checkBox_FileStructure" VerticalAlignment="Top" IsChecked="False"/>
+                        </Grid>
+                    </GroupBox>
+                    
+                    <GroupBox Header="Local XClaim Data" Height="100" VerticalAlignment="Top" Margin="6,221,0,0" HorizontalAlignment="Left" Width="162">
+                        <Grid>
+                            <Button Content="Open"         Height="23" HorizontalAlignment="Left" Margin="10,10,0,0"  Name="button_LocalData"        VerticalAlignment="Top" Width="120" Click="button_LocalData_Click" />
+                            <Button Content="Clear"         Height="23" HorizontalAlignment="Left" Margin="10,43,0,0"  Name="button_ClearData"        VerticalAlignment="Top" Width="120" Click="button_ClearData_Click" />
+                            
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Server" Height="98" VerticalAlignment="Top" Margin="174,6,188,0">
+                        <Grid>
+                            <Button Content="Sites"         Height="23" HorizontalAlignment="Left"  Margin="10,10,0,0"   Name="button_Prod"            VerticalAlignment="Top" Width="120" Click="button_Prod_Click" />
+                            <Button Content="Logs"          Height="23" HorizontalAlignment="Left"  Margin="10,40,0,0"  Name="button_ProdLog"         VerticalAlignment="Top" Width="120" Click="button_ProdLog_Click" />
+                            <Button Content="WorkingFiles"  Height="23" HorizontalAlignment="Left"  Margin="130,40,0,0" Name="button_WorkingFiles" VerticalAlignment="Top" Width="120" Click="button_WorkingFiles_Click" />
+                            <Button Content="FTP Directory" Height="23" HorizontalAlignment="Left"  Margin="250,40,0,0"  Name="button_FTP"         VerticalAlignment="Top" Width="120" Click="button_FTP_Click" />
+                            <Button Content="Download/Misc" Height="23" HorizontalAlignment="Left" Margin="130,10,0,0" Name="button_DownloadMisc" VerticalAlignment="Top" Width="120" Click="button_DownloadMisc_Click" />
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Files" Height="100" VerticalAlignment="Top" Margin="174,115,188,0">
+                        <Grid>
+                            <Button Content="ClaimsPrinting.xml" Height="23" HorizontalAlignment="Left"  Margin="10,10,0,0"  Name="button_ClaimsPrinting"  VerticalAlignment="Top" Width="120" Click="button_ClaimsPrinting_Click" />
+                            <Button Content="XLinkSiteCfg.xml"   Height="23" HorizontalAlignment="Left"  Margin="130,10,0,0" Name="button_XLinkSiteCfg"    VerticalAlignment="Top" Width="120" Click="button_XLinkSiteCfg_Click" />
+                            <Button Content="ClaimConverter.xml" Height="23" HorizontalAlignment="Left"  Margin="250,10,0,0" Name="button_ClaimConverter"  VerticalAlignment="Top" Width="120" Click="button_ClaimConverter_Click" />
+                            <Button Content="ExportConfig.xml"   Height="23" HorizontalAlignment="Left"  Margin="10,43,0,0"  Name="button_ExportConfig"    VerticalAlignment="Top" Width="120" Click="button_ExportConfig_Click" />
+                            <Button Content="XDM.config"         Height="23" HorizontalAlignment="Left"  Margin="130,43,0,0" Name="button_XDMConfig"       VerticalAlignment="Top" Width="120" Click="button_XDMConfig_Click" />
+                            <Button Content="SecondaryConfig.xml" Height="23" HorizontalAlignment="Left" Margin="250,43,0,0" Name="button_SecondaryConfig" VerticalAlignment="Top" Width="120" Click="button_SecondaryConfig_Click"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="XMB" Name="tab_XMB">
+                <Grid Height="430" Width="755">
+                    <TextBox Name="textBox_ClaimSearch" Height="24" Width="163" Margin="212,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    
+                    <Button Content="Open XMB" Height="23" HorizontalAlignment="Left" Margin="167,29,0,0" Name="button_OpenClaim" VerticalAlignment="Top" Width="75" Click="button_OpenClaim_Click" />
+                    <Button Content="Save XMB" Height="23" HorizontalAlignment="Left" Margin="12,138,0,0" Name="button_SaveXMB" VerticalAlignment="Top" Width="88" Click="button_SaveXMB_Click" />
+                    <Button Content="Save Original" Height="23" HorizontalAlignment="Right" Margin="0,138,555,0" Name="button_SaveOriginal" VerticalAlignment="Top" Width="88" Click="button_SaveOriginal_Click" />
+                    <Button Content="Local Import Folder" Height="23" HorizontalAlignment="Left" Margin="255,29,0,0" Name="button_LocalImportFolder" VerticalAlignment="Top" Width="120" Click="button_LocalImportFolder_Click" />
+                    <GroupBox Header="Claim Type" Height="60" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox_ClaimType" VerticalAlignment="Top" Width="150">
+                        <Grid>
+                            <RadioButton Content="UB" Name="radioButton_UB" Height="16" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+                            <RadioButton Content="HCFA" Name="radioButton_HCFA" Height="16" Margin="50,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Search For:" Height="60" HorizontalAlignment="Left" Margin="6,72,0,0" Name="groupBox_InputType" VerticalAlignment="Top" Width="200">
+                        <Grid>
+                            <RadioButton Content="Claim ID(s)" Name="radioButton_ClaimIDs" Height="16" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButton_ClaimIDs_Checked" />
+                            <RadioButton Content="Import ID" Name="radioButton_ImportID" Height="16" Margin="100,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButton_ImportID_Checked" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Claim Lookup" Name="tab_ClaimLookup">
+                <Grid Height="430" Width="755">
+                    <DataGrid AutoGenerateColumns="True" Height="322" HorizontalAlignment="Left" Margin="6,73,0,0" Name="dataGrid_ClaimLookup_Results" VerticalAlignment="Top" Width="743" SelectionMode="Extended" AlternatingRowBackground="LightBlue" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True" CanUserResizeRows="False" IsReadOnly="True" IsTextSearchEnabled="True" SelectionUnit="CellOrRowHeader"/>
+                    <RadioButton Content="Claim ID(s)" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="radioButton_ClaimLookup_ClaimIDs" VerticalAlignment="Top" Click="radioButton_ClaimLookup_ClaimIDs_Click"/>
+                    <RadioButton Content="PCN(s)" Height="16" HorizontalAlignment="Left" Margin="6,21,0,0" Name="radioButton_ClaimLookup_PCNs" VerticalAlignment="Top" Click="radioButton_ClaimLookup_PCNs_Click"/>
+                    <RadioButton Content="Import ID(s)" Height="16" HorizontalAlignment="Left" Margin="6,36,0,0" Name="radioButton_ClaimLookup_ImportIDs" VerticalAlignment="Top" Click="radioButton_ClaimLookup_ImportIDs_Click"/>
+                    <RadioButton Content="Export ID(s)" Height="16" HorizontalAlignment="Left" Margin="6,51,0,0" Name="radioButton_ClaimLookup_ExportIDs" VerticalAlignment="Top" Click="radioButton_ClaimLookup_ExportIDs_Click"/>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="106,6,0,0" Name="textBox_ClaimLookup_Input" VerticalAlignment="Top" Width="166" />
+                    <Button Content="Find" Height="23" HorizontalAlignment="Left" Margin="106,36,0,0" Name="button_ClaimLookup_Find" VerticalAlignment="Top" Width="80" Click="button_ClaimLookup_Find_Click" IsDefault="True"/>
+                    <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="192,36,0,0" Name="button_ClaimLookup_Clear" VerticalAlignment="Top" Width="80" Click="button_ClaimLookup_Clear_Click" />
+                    <Label Content="MaxRowCount" Height="28" HorizontalAlignment="Left" Margin="591,4,0,0" Name="label1" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,6,6,0" Name="textBox_ClaimLookup_MaxCount" VerticalAlignment="Top" Width="65" />
+                    <Label Content="Click 'Find' to search for Claims" Height="28" HorizontalAlignment="Left" Margin="6,396,0,0" Name="label_ClaimLookup_ReturnedRows" VerticalAlignment="Top" Width="180" />
+                    <Button Content="Pop Out" Height="23" HorizontalAlignment="Left" Margin="674,401,0,0" Name="button_ClaimLookup_PopOut" VerticalAlignment="Top" Width="75" Click="button_ClaimLookup_PopOut_Click"/>
+                    <Button Content="View History" Height="23" HorizontalAlignment="Left" Margin="342,36,0,0" Name="button_ClaimLookup_ViewHistory" VerticalAlignment="Top" Width="85" Click="button_ClaimLookup_ViewHistory_Click" />
+                    <Button Content="View Notes" Height="23" HorizontalAlignment="Left" Margin="433,36,0,0" Name="button_ClaimLookup_ViewNotes" VerticalAlignment="Top" Width="85" Click="button_ClaimLookup_ViewNotes_Click" />
+                    <Button Content="Save XMB" Height="23" HorizontalAlignment="Left" Margin="591,36,0,0" Name="button_ClaimLookup_SaveXMB" VerticalAlignment="Top" Width="75" Click="button_ClaimLookup_SaveXMB_Click" />
+                    <Button Content="Save Original" Height="23" HorizontalAlignment="Left" Margin="674,36,0,0" Name="button_ClaimLookup_SaveOriginal" VerticalAlignment="Top" Width="75" Click="button_ClaimLookup_SaveOriginal_Click" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Import/Export" Name="tab_ImportExport">
+                <Grid Height="430" Width="755">
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="159,54,0,0" Name="textBox_ImportExport_IDs" VerticalAlignment="Top" Width="308" />
+                    <GroupBox Header="Type" Height="83" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox_ImportExport_Type" VerticalAlignment="Top" Width="81">
+                        <Grid>
+                            <RadioButton Content="Import" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="radioButton_ImportExport_Import" VerticalAlignment="Top" Checked="radioButton_ImportExport_Import_Checked" />
+                            <RadioButton Content="Export" Height="16" HorizontalAlignment="Left" Margin="6,34,0,0" Name="radioButton_ImportExport_Export" VerticalAlignment="Top" Checked="radioButton_ImportExport_Export_Checked" />
+                        </Grid>
+                    </GroupBox>
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="202,26,0,0" Name="datePicker_ImportExport_From" VerticalAlignment="Top" Width="115" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="352,25,0,0" Name="datePicker_ImportExport_To" VerticalAlignment="Top" Width="115" />
+                    <RadioButton Content="By Date:" Height="16" HorizontalAlignment="Left" Margin="94,29,0,0" Name="radioButton_ImportExport_ByDate" VerticalAlignment="Top" Checked="radioButton_ImportExport_ByDate_Checked" />
+                    <RadioButton Content="By ID(s):" Height="16" HorizontalAlignment="Left" Margin="94,57,0,0" Name="radioButton_ImportExport_ByID" VerticalAlignment="Top" Checked="radioButton_ImportExport_ByID_Checked" />
+                    <Label Content="From" Height="28" HorizontalAlignment="Left" Margin="159,25,0,0" Name="label2" VerticalAlignment="Top" />
+                    <Label Content="To" Height="28" HorizontalAlignment="Left" Margin="323,25,0,0" Name="label3" VerticalAlignment="Top" />
+                    <DataGrid AutoGenerateColumns="True" Height="300" HorizontalAlignment="Left" Margin="6,95,0,0" Name="dataGrid_ImportExport_Results" VerticalAlignment="Top" Width="743" SelectionMode="Extended"  AlternatingRowBackground="LightBlue" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True" CanUserResizeRows="False" IsReadOnly="True" IsTextSearchEnabled="True" SelectionUnit="CellOrRowHeader" />
+                    <Button Content="Find" Height="26" HorizontalAlignment="Right" Margin="0,55,6,0" Name="button_ImportExport_Find" VerticalAlignment="Top" Width="75" Click="button_ImportExport_Find_Click" IsDefault="True"/>
+                    <Button Content="Clear" Height="26" HorizontalAlignment="Left" Margin="674,23,0,0" Name="button_ImportExport_Clear" VerticalAlignment="Top" Width="75" Click="button_ImportExport_Clear_Click"/>
+                    <Label Content="Click 'Find' to search for Imports and Exports" Height="28" HorizontalAlignment="Left" Margin="6,396,0,0" Name="label_ImportExport_RowsReturned" VerticalAlignment="Top" />
+                    <Button Content="Pop Out" Height="23" HorizontalAlignment="Left" Margin="674,401,0,0" Name="button_ImportExport_PopOut" VerticalAlignment="Top" Width="75" Click="button_ImportExport_PopOut_Click"/>
+                    <Button Content="View Import Report" Height="23" HorizontalAlignment="Left" Margin="476,401,0,0" Name="button_ImportExport_ViewReport" VerticalAlignment="Top" Width="155" Click="button_ImportExport_ViewReport_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Groups" Name="tab_Groups">
+                <Grid Height="430" Width="755">
+                    <DataGrid AutoGenerateColumns="True" Height="309" HorizontalAlignment="Left" Margin="6,86,0,0" Name="dataGrid_Groups_Results" VerticalAlignment="Top" Width="743" SelectionMode="Extended" AlternatingRowBackground="LightBlue" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True" CanUserResizeRows="False" IsReadOnly="True" IsTextSearchEnabled="True" SelectionUnit="CellOrRowHeader"/>
+                    <GroupBox Header="Status" Height="45" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox1" VerticalAlignment="Top" Width="211">
+                        <Grid>
+                            <CheckBox Content="Active" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="checkBox_Groups_Active" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="Disabled" Height="16" HorizontalAlignment="Left" Margin="61,6,0,0" Name="checkBox_Groups_Disabled" VerticalAlignment="Top" />
+                            <CheckBox Content="Deleted" Height="16" HorizontalAlignment="Left" Margin="130,6,0,0" Name="checkBox_Groups_Deleted" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Scheduled" Height="45" HorizontalAlignment="Left" Margin="220,6,0,0" Name="groupBox2" VerticalAlignment="Top" Width="116">
+                        <Grid>
+                            <CheckBox Content="True" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="checkBox_Groups_isScheduled" VerticalAlignment="Top" IsChecked="True"/>
+                            <CheckBox Content="False" Height="16" HorizontalAlignment="Left" Margin="53,6,0,0" Name="checkBox_Groups_isNotScheduled" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Find" Height="23" Margin="674,51,6,0" Name="button_Groups_Find" VerticalAlignment="Top" Click="button_Groups_Find_Click" IsDefault="True"/>
+                    <Label Content="Click 'Find' to Search a site's groups..." Height="28" HorizontalAlignment="Left" Margin="6,396,0,0" Name="label_Group" VerticalAlignment="Top" />
+                    <GroupBox Header="App" Height="45" HorizontalAlignment="Left" Margin="338,6,0,0" Name="groupBox3" VerticalAlignment="Top" Width="121">
+                        <Grid>
+                            <CheckBox Content="XClaim" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="6,6,0,0" Name="checkBox_Groups_AppXClaim" VerticalAlignment="Top" />
+                            <CheckBox Content="XDM" Height="16" HorizontalAlignment="Left" Margin="61,6,0,0" Name="checkBox_Groups_AppXDM" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <Label Content="Group:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="label4" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="50,54,0,0" Name="textBox_Groups_NameFilter" VerticalAlignment="Top" Width="161" />
+                    <Label Content="CLX:" Height="28" HorizontalAlignment="Left" Margin="226,52,0,0" Name="label5" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="270,54,0,0" Name="textBox_Groups_CLXFilter" VerticalAlignment="Top" Width="189" />
+                    <Button Content="Pop Out" Height="23" HorizontalAlignment="Left" Margin="674,401,0,0" Name="button_Groups_PopOut" VerticalAlignment="Top" Width="75" Click="button_Groups_PopOut_Click"/>
+                    <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="674,22,0,0" Name="button_Groups_Clear" VerticalAlignment="Top" Width="75" Click="button_Groups_Clear_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Misc." Name="tab_Misc">
+                <Grid Height="430" Width="755">
+                    <GroupBox Header="Logs" Height="119" HorizontalAlignment="Left" Margin="351,6,0,0" Name="groupBox_Logs" VerticalAlignment="Top" Width="183">
+                        <Grid>
+                            <Button Content="File Processing Immediate" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_FPImmediate" VerticalAlignment="Top" Width="155" Click="button_FPImmediate_Click" />
+                            <Button Content="File Processing Import Only" Height="23" HorizontalAlignment="Left" Margin="6,35,0,0" Name="button_FPImportOnly" VerticalAlignment="Top" Width="155" Click="button_FPImportOnly_Click" />
+                            <Button Content="File Processing Long Running" Height="23" HorizontalAlignment="Left" Margin="6,64,0,0" Name="button_FPLongRunning" VerticalAlignment="Top" Width="155" Click="button_FPLongRunning_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Multi-Site" Height="109" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox_MultiSite" VerticalAlignment="Top" Width="339">
+                        <Grid>
+                            <TextBox Height="23" HorizontalAlignment="Left" Margin="6,10,0,0" Name="textBox_Sites" VerticalAlignment="Top" Width="315" />
+                            <Button Content="Find Task Servers" Height="23" HorizontalAlignment="Left" Margin="6,47,0,0" Name="button_TaskServers" VerticalAlignment="Top" Width="120" Click="button_TaskServers_Click" />
+                            <Button Content="Find Claim Servers" Height="23" HorizontalAlignment="Left" Margin="132,47,0,0" Name="button_ClaimServers" VerticalAlignment="Top" Width="120" Click="button_ClaimServers_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Site Lookup" Height="193" HorizontalAlignment="Left" Margin="6,121,0,0" Name="groupBox4" VerticalAlignment="Top" Width="333">
+                        <Grid>
+                            <TextBox Height="23" HorizontalAlignment="Left" Margin="6,7,0,0" Name="textBox_Misc_SiteLookup_SearchTerm" VerticalAlignment="Top" Width="228" />
+                            <Button Content="Lookup" Height="23" HorizontalAlignment="Left" Margin="240,6,0,0" Name="button_Misc_SiteLookup_Find" VerticalAlignment="Top" Width="75" Click="button_Misc_SiteLookup_Find_Click"/>
+                            <TextBox Height="128" HorizontalAlignment="Left" Margin="6,36,0,0" Name="textBox_Misc_SiteLookup_Answer" VerticalAlignment="Top" Width="309" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Batching" Name="tab_Batching">
+                <Grid>
+                    <GroupBox Header="Local" Height="122" HorizontalAlignment="Left" Margin="6,6,0,0" Name="groupBox_Batching_Local" VerticalAlignment="Top" Width="167">
+                        <Grid>
+                            <Button Content="Batching Configs" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_Batching_Local_BConfigs" VerticalAlignment="Top" Width="139" Click="button_Batching_Local_BConfigs_Click"/>
+                            <Button Content="Reformatter Configs" Height="23" HorizontalAlignment="Left" Margin="6,35,0,0" Name="button_Batching_Local_RConfigs" VerticalAlignment="Top" Width="139" Click="button_Batching_Local_RConfigs_Click"/>
+                            <Button Content="Batching Schedules" Height="23" HorizontalAlignment="Left" Margin="6,64,0,0" Name="button_Batching_Local_BSchedules" VerticalAlignment="Top" Width="139" Click="button_Batching_Local_BSchedules_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Server" Height="122" HorizontalAlignment="Left" Margin="179,6,0,0" Name="groupBox7" VerticalAlignment="Top" Width="167">
+                        <Grid>
+                            <Button Content="Batching Configs" Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_Batching_Server_BConfigs" VerticalAlignment="Top" Width="139" Click="button_Batching_Server_BConfigs_Click"/>
+                            <Button Content="Reformatter Configs" Height="23" HorizontalAlignment="Left" Margin="6,35,0,0" Name="button_Batching_Server_RConfigs" VerticalAlignment="Top" Width="139" Click="button_Batching_Server_RConfigs_Click"/>
+                            <Button Content="Batching Schedules" Height="23" HorizontalAlignment="Left" Margin="6,64,0,0" Name="button_Batching_Server_BSchedules" VerticalAlignment="Top" Width="139" Click="button_Batching_Server_BSchedules_Click"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,550,0,0" Name="statusBar" VerticalAlignment="Top" Width="800" >
+            <StatusBarItem>
+                <TextBlock Name="Status" Text="Welcome!" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
+    

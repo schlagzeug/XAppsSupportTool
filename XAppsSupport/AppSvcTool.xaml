@@ -1,0 +1,43 @@
+﻿<Window x:Class="XAppsSupport.AppSvcTool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AppSvcTool" Height="486" Width="450">
+    <Grid Height="446" Width="422">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="94,12,0,0" Name="textBox_SiteID" VerticalAlignment="Top" Width="316" />
+
+        <ListBox Height="212" HorizontalAlignment="Left" Margin="12,123,0,0" Name="listBox_Files" VerticalAlignment="Top" Width="211" SelectionMode="Multiple" />
+
+        <Button Content="Show Logs" 		   Height="23" HorizontalAlignment="Left"  Margin="12,94,0,0"  Name="button_ShowLogs" 		  VerticalAlignment="Top" Width="140" Click="button_ShowLogs_Click" IsDefault="True" />
+        <Button Content="Open Log Directory"   Height="23" HorizontalAlignment="Left"  Margin="12,341,0,0" Name="button_OpenLogDirectory" VerticalAlignment="Top" Width="140" Click="button_OpenLogDirectory_Click" />
+        <Button Content="Generate Files"	   Height="23" HorizontalAlignment="Left"  Margin="12,382,0,0" Name="button_GenerateFiles"    VerticalAlignment="Top" Width="140" Click="button_GenerateFiles_Click" />
+        <Button Content="Open Local Directory" Height="23" HorizontalAlignment="Left"  Margin="12,411,0,0" Name="button_OpenDirectory"    VerticalAlignment="Top" Width="140" Click="button_OpenDirectory_Click" />
+        <Button Content="Open XML File" 	   Height="23" HorizontalAlignment="Left"  Margin="158,411,0,0" Name="button_OpenFile"         VerticalAlignment="Top" Width="140" Click="button_OpenFile_Click" />
+        <Button Content="Run Batch File" 	   Height="23" HorizontalAlignment="Left"  Margin="158,382,0,0" Name="button_RunBatch" 	      VerticalAlignment="Top" Width="140" Click="button_RunBatch_Click" />
+
+        <GroupBox Header="Errors:" HorizontalAlignment="Left" Margin="236,115,0,0" Name="groupBox1" VerticalAlignment="Top">
+            <Grid>
+                <Button Content="Check All" HorizontalAlignment="Left" Margin="6,100,0,0" Name="button_CheckAll" VerticalAlignment="Bottom" Width="75" Click="button_CheckAll_Click" />
+                <Button Content="Clear All" HorizontalAlignment="Left" Margin="87,100,0,0" Name="button_ClearAll" VerticalAlignment="Bottom" Width="75" Click="button_ClearAll_Click" />
+
+                <CheckBox Content="Unarchive Tasks"	Margin="6,6,0,120"	Name="checkBox_Unarchive"     Checked="checkBox_Unarchive_Checked" Unchecked="checkBox_Unarchive_Unchecked" />
+                <CheckBox Content="UB Imports"		Margin="6,26,0,100"	Name="checkBox_UBImports"     Checked="checkBox_UBImports_Checked" Unchecked="checkBox_UBImports_Unchecked" />
+                <CheckBox Content="HCFA Imports"	Margin="6,46,0,80"	Name="checkBox_HCFAImports"   Checked="checkBox_HCFAImports_Checked" Unchecked="checkBox_HCFAImports_Unchecked" />
+                <CheckBox Content="Status Updates"	Margin="6,66,0,60"	Name="checkBox_StatusUpdates" Checked="checkBox_StatusUpdates_Checked" Unchecked="checkBox_StatusUpdates_Unchecked" />
+            </Grid>
+        </GroupBox>
+        <RadioButton Content="Site ID(s)" Height="16" HorizontalAlignment="Left" Margin="12,15,0,0" Name="radioButton_SiteID" VerticalAlignment="Top" Checked="radioButton_SiteID_Checked" />
+        <RadioButton Content="Task Server" Height="16" HorizontalAlignment="Left" Margin="12,49,0,0" Name="radioButton_TaskServer" VerticalAlignment="Top" Checked="radioButton_TaskServer_Checked" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="94,42,0,0" Name="comboBox_TaskServers" VerticalAlignment="Top" Width="162" SelectionChanged="comboBox_TaskServers_SelectionChanged" />
+        <GroupBox Header="Find By:" Height="46" HorizontalAlignment="Left" Margin="236,71,0,0" Name="groupBox2" VerticalAlignment="Top" Width="174">
+            <Grid>
+                <RadioButton Content="Error" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="radioButton_Error" VerticalAlignment="Top" Checked="radioButton_Error_Checked"/>
+                <RadioButton Content="Key Word" Height="16" HorizontalAlignment="Left" Margin="54,6,0,0" Name="radioButton_KeyWord" VerticalAlignment="Top" Checked="radioButton_KeyWord_Checked"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Key Word:" Height="90" HorizontalAlignment="Left" Margin="236,286,0,0" Name="groupBox3" VerticalAlignment="Top" Width="174">
+            <Grid>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="6,19,0,0" Name="textBox_KeyWord" VerticalAlignment="Top" Width="150" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

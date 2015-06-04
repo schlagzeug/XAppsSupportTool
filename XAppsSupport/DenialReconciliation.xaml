@@ -1,0 +1,42 @@
+﻿<Window x:Class="XAppsSupport.DenialReconciliation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Denial_Reconciliation" Height="467" Width="360">
+    <Grid Height="430" Width="340">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0"  Name="textBlock_SiteID"    Text="Site ID:"      VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,291,0,0" Name="textBlock_Exception" Text="Exception Key" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,12,0,0" Name="textBox_SiteID" VerticalAlignment="Top" Width="120" />
+
+        <Button Content="Go to directory" Height="23" HorizontalAlignment="Left" Margin="190,12,0,0"  Name="button_Directory" VerticalAlignment="Top" Width="100" Click="button_Directory_Click" />
+        <Button Content="Generate File"   Height="23" HorizontalAlignment="Left" Margin="12,331,0,0"  Name="button_Generate"  VerticalAlignment="Top" Width="100" Click="button_Generate_Click" />
+        <Button Content="Run Batch File"  Height="23" HorizontalAlignment="Left" Margin="190,360,0,0" Name="button_Run"       VerticalAlignment="Top" Width="100" Click="button_Run_Click" />
+
+        <CheckBox Content="Generate Batch File" Height="16" HorizontalAlignment="Left" Margin="190,335,0,0" Name="checkBox_GenerateBatch" VerticalAlignment="Top" IsChecked="True" />
+
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="92,291,0,0" Name="comboBox_Exception" VerticalAlignment="Top" Width="217" Text="Select Exception Key Word(s)" IsEditable="True" IsReadOnly="True" />
+
+        <GroupBox Header="Generate By:" Height="244" HorizontalAlignment="Left" Margin="18,41,0,0" Name="groupBox_GenerateBy" VerticalAlignment="Top" Width="291">
+            <Grid>
+                <RadioButton Content="Today"              Height="16" HorizontalAlignment="Left" Margin="6,6,0,0"   Name="radioButton_Today"     VerticalAlignment="Top" Checked="radioButton_Today_Checked" />
+                <RadioButton Content="Date Range"         Height="16" HorizontalAlignment="Left" Margin="6,28,0,0"  Name="radioButton_DateRange" VerticalAlignment="Top" Checked="radioButton_DateRange_Checked" />
+                <RadioButton Content="List of Report IDs" Height="16" HorizontalAlignment="Left" Margin="6,110,0,0" Name="radioButton_List"      VerticalAlignment="Top" Checked="radioButton_List_Checked" />
+                <RadioButton Content="By File"            Height="16" HorizontalAlignment="Left" Margin="6,161,0,0" Name="radioButton_File"      VerticalAlignment="Top" Checked="radioButton_File_Checked" />
+
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="134,50,0,0" Name="datePicker_From" VerticalAlignment="Top" Width="115" SelectedDate="{x:Static sys:DateTime.Now}"/>
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="134,81,0,0" Name="datePicker_To"   VerticalAlignment="Top" Width="115" SelectedDate="{x:Static sys:DateTime.Now}"/>
+
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,50,0,0" Name="textBlock_From" Text="Log From Date:" VerticalAlignment="Top" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,81,0,0" Name="textBlock_To"   Text="Log To Date:"   VerticalAlignment="Top" />
+
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="32,132,0,0" Name="textBox_List" VerticalAlignment="Top" Width="217" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="32,183,0,0" Name="textBox_File" VerticalAlignment="Top" Width="217" />
+            </Grid>
+        </GroupBox>
+        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,407,0,0" Name="statusBar1" VerticalAlignment="Top" Width="485">
+            <StatusBarItem>
+                <TextBlock Name="textBlock_Status" Text="Waiting..."/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="XAppsSupport.StVincentFacilities"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StVincentFacilities" ResizeMode="CanMinimize" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="173" d:DesignWidth="217" SizeToContent="WidthAndHeight">
+    <Grid>
+        <DataGrid AutoGenerateColumns="True" Height="Auto" HorizontalAlignment="Left" Name="dataGrid" VerticalAlignment="Top" Width="Auto" SelectionMode="Extended" AlternatingRowBackground="LightBlue" 
+                              CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True" CanUserResizeRows="False" IsReadOnly="True" IsTextSearchEnabled="True" SelectionUnit="CellOrRowHeader" Margin="0,63,0,0" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="91,35,0,0" Name="comboBox_Routines" VerticalAlignment="Top" SelectionChanged="comboBox_Routines_SelectionChanged"/>
+        <RadioButton Content="All" Height="16" HorizontalAlignment="Left" Margin="12,12,0,0" Name="radioButton_All" VerticalAlignment="Top" Checked="radioButton_All_Checked" />
+        <RadioButton Content="By Routine" Height="16" HorizontalAlignment="Left" Margin="12,36,0,0" Name="radioButton_ByRoutine" VerticalAlignment="Top" Checked="radioButton_ByRoutine_Checked" />
+        <Button Content="Dr Seuss Refresh" Height="23" Name="button_Refresh" VerticalAlignment="Top" Click="button_Refresh_Click" HorizontalAlignment="Right" Width="101" />
+    </Grid>
+</Window>

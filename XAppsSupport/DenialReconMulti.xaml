@@ -1,0 +1,28 @@
+﻿<Window x:Class="XAppsSupport.DenialReconMulti"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="DenialReconMulti" Height="300" Width="485">
+    <Grid>
+        <Label Content="Site ID(s):" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label_Sites" VerticalAlignment="Top" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="77,14,0,0" Name="textBox_Sites" VerticalAlignment="Top" Width="372" />
+
+        <Button Content="Generate Files"  Height="23" HorizontalAlignment="Left"  Margin="12,212,0,0"  Name="button_Generate"      VerticalAlignment="Top" Width="105" Click="button_Generate_Click" IsDefault="True" />
+        <Button Content="Go To Directory" Height="23" HorizontalAlignment="Right" Margin="0,212,36,0"  Name="button_GoToDirectory" VerticalAlignment="Top" Width="105" Click="button_GoToDirectory_Click" />
+        <Button Content="Run Batch File"  Height="23" HorizontalAlignment="Left"  Margin="178,212,0,0" Name="button_RunBatchFile"  VerticalAlignment="Top" Width="105" Click="button_RunBatchFile_Click" />
+
+        <GroupBox Header="Generate By:" Height="160" HorizontalAlignment="Left" Margin="77,46,0,0" Name="groupBox_GenerateBy" VerticalAlignment="Top" Width="314">
+            <Grid Height="129">
+                <RadioButton Content="Today"      Height="16" HorizontalAlignment="Left" Margin="10,10,0,0" Name="radioButton_Today"     VerticalAlignment="Top" Checked="radioButton_Today_Checked" />
+                <RadioButton Content="Date Range" Height="16" HorizontalAlignment="Left" Margin="10,32,0,0" Name="radioButton_DateRange" VerticalAlignment="Top" Checked="radioButton_DateRange_Checked" />
+
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="138,54,0,0" Name="datePicker_From" SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Width="115" Grid.ColumnSpan="2" />
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="138,85,0,0" Name="datePicker_To"   SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Width="115" Grid.ColumnSpan="2" />
+
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="36,54,0,0" Name="textBlock_From" Text="Log From Date:" VerticalAlignment="Top" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="36,85,0,0" Name="textBlock_To"   Text="Log To Date:"   VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
